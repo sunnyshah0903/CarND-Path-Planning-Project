@@ -444,6 +444,8 @@ int main() {
 		ref_vel = increase_speed(ref_vel);  // start increasing speed as no vehicle ahead of us
 
 
+	// Ref for most of the code below: Project Walkthrough and Q&A video
+
 	vector<double> ptsx;
 	vector<double> ptsy;
 
