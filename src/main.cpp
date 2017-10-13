@@ -251,7 +251,7 @@ int check_available_lane(int current_lane, vector<vector<double>> sensor_fusion,
 	if(current_lane == 1)
 	{
 		final_lane = -1;
-
+		printf("\nMeta Data left = %f,%d and right = %f,%d =  ",min_left,left_lane_safe,min_right,right_lane_safe);
 		if(min_left == 99999.0 && left_lane_safe == true)   // no car in left lane, make change.
 		{
 			final_lane = 0;
@@ -284,7 +284,7 @@ int check_available_lane(int current_lane, vector<vector<double>> sensor_fusion,
 		}
 		if(left_lane_safe != true)			// left lane not safe
 		{
-			if (min_right == SAFE_LANE_DISTANCE && right_lane_safe == true) // is right lane safe?
+			if (min_right >= SAFE_LANE_DISTANCE && right_lane_safe == true) // is right lane safe?
 			{
 				final_lane = 2;			
 				return final_lane;
